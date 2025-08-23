@@ -1,0 +1,48 @@
+# --- Git ---
+.git
+.gitignore
+
+# --- Dependencies ---
+/node_modules
+/vendor
+
+# --- Env files ---
+.env
+.env.*
+!/.env.example   # keep env example for reference
+
+# --- Laravel cache & logs ---
+/bootstrap/cache/*.php
+/storage/*.key
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*
+/storage/logs/*
+/storage/pail
+
+# --- Public build outputs ---
+/public/build
+/public/hot
+/public/storage
+
+# --- Test cache ---
+/.phpunit.cache
+.phpunit.result.cache
+
+# --- Docker configs ---
+docker-compose.yml
+docker-compose.override.yml
+
+# --- Editor/IDE ---
+/.fleet
+/.idea
+/.vscode
+/.zed
+/.nova
+.phpactor.json
+*.code-workspace
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
