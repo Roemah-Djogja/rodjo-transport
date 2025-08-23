@@ -1,4 +1,17 @@
-# --- Laravel build & cache ---
+# --- Git ---
+.git
+.gitignore
+
+# --- Dependencies ---
+/node_modules
+/vendor
+
+# --- Env files ---
+.env
+.env.*
+!/.env.example   # keep env example for reference
+
+# --- Laravel cache & logs ---
 /bootstrap/cache/*.php
 /storage/*.key
 /storage/framework/cache/*
@@ -8,18 +21,6 @@
 /storage/logs/*
 /storage/pail
 
-# --- Env & secrets ---
-.env
-.env.*
-!.env.example          # tetap commit contoh env
-.env.backup
-.env.production
-/auth.json
-
-# --- Vendor / deps ---
-/vendor
-/node_modules
-
 # --- Public build outputs ---
 /public/build
 /public/hot
@@ -28,6 +29,10 @@
 # --- Test cache ---
 /.phpunit.cache
 .phpunit.result.cache
+
+# --- Docker configs ---
+docker-compose.yml
+docker-compose.override.yml
 
 # --- Editor/IDE ---
 /.fleet
@@ -41,7 +46,3 @@
 # --- OS junk ---
 .DS_Store
 Thumbs.db
-
-# --- Homestead (jika tidak dipakai) ---
-Homestead.json
-Homestead.yaml
