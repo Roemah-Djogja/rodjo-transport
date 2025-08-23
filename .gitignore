@@ -1,23 +1,47 @@
-/.phpunit.cache
+# --- Laravel build & cache ---
+/bootstrap/cache/*.php
+/storage/*.key
+/storage/framework/cache/*
+/storage/framework/sessions/*
+/storage/framework/testing/*
+/storage/framework/views/*
+/storage/logs/*
+/storage/pail
+
+# --- Env & secrets ---
+.env
+.env.*
+!.env.example          # tetap commit contoh env
+.env.backup
+.env.production
+/auth.json
+
+# --- Vendor / deps ---
+/vendor
 /node_modules
+
+# --- Public build outputs ---
 /public/build
 /public/hot
 /public/storage
-/storage/*.key
-/storage/pail
-/vendor
-.env
-.env.backup
-.env.production
-.phpactor.json
+
+# --- Test cache ---
+/.phpunit.cache
 .phpunit.result.cache
-Homestead.json
-Homestead.yaml
-npm-debug.log
-yarn-error.log
-/auth.json
+
+# --- Editor/IDE ---
 /.fleet
 /.idea
-/.nova
 /.vscode
 /.zed
+/.nova
+.phpactor.json
+*.code-workspace
+
+# --- OS junk ---
+.DS_Store
+Thumbs.db
+
+# --- Homestead (jika tidak dipakai) ---
+Homestead.json
+Homestead.yaml
